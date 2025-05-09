@@ -1,0 +1,54 @@
+[2025-05-09T21:44:11.759+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: huggingface_pipeline.extract_data manual__2025-05-09T21:44:09.888749+00:00 [queued]>
+[2025-05-09T21:44:11.769+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: huggingface_pipeline.extract_data manual__2025-05-09T21:44:09.888749+00:00 [queued]>
+[2025-05-09T21:44:11.770+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-09T21:44:11.772+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2025-05-09T21:44:11.773+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-09T21:44:11.781+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_data> on 2025-05-09 21:44:09.888749+00:00
+[2025-05-09T21:44:11.787+0000] {standard_task_runner.py:55} INFO - Started process 80689 to run task
+[2025-05-09T21:44:11.791+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'huggingface_pipeline', 'extract_data', 'manual__2025-05-09T21:44:09.888749+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/huggingface_pipeline.py', '--cfg-path', '/tmp/tmpe2vkqxxt']
+[2025-05-09T21:44:11.794+0000] {standard_task_runner.py:83} INFO - Job 27: Subtask extract_data
+[2025-05-09T21:44:11.812+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-09T21:44:11.872+0000] {task_command.py:389} INFO - Running <TaskInstance: huggingface_pipeline.extract_data manual__2025-05-09T21:44:09.888749+00:00 [running]> on host 1efa7b9b4bb1
+[2025-05-09T21:44:11.927+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=huggingface_pipeline
+AIRFLOW_CTX_TASK_ID=extract_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-09T21:44:09.888749+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-05-09T21:44:09.888749+00:00
+[2025-05-09T21:44:13.894+0000] {logging_mixin.py:137} INFO - Downloading and preparing dataset None/plain_text to /home/***/.cache/huggingface/datasets/parquet/plain_text-cafccae0f4e408dc/0.0.0/14a00e99c0d15a23649d0db8944380ac81082d4b021f398733dd84f3a6c569a7...
+[2025-05-09T21:44:14.104+0000] {logging_mixin.py:137} WARNING - Downloading data files:   0%|          | 0/2 [00:00<?, ?it/s]
+[2025-05-09T21:44:14.107+0000] {logging_mixin.py:137} WARNING - Downloading data files: 100%|##########| 2/2 [00:00<00:00, 1312.36it/s]
+[2025-05-09T21:44:14.110+0000] {logging_mixin.py:137} WARNING - Extracting data files:   0%|          | 0/2 [00:00<?, ?it/s]
+[2025-05-09T21:44:14.116+0000] {logging_mixin.py:137} WARNING - Extracting data files: 100%|##########| 2/2 [00:00<00:00, 444.88it/s]
+[2025-05-09T21:44:14.117+0000] {logging_mixin.py:137} WARNING - Generating train split:   0%|          | 0/25000 [00:00<?, ? examples/s]
+[2025-05-09T21:44:14.336+0000] {logging_mixin.py:137} WARNING - Generating train split:  40%|####      | 10000/25000 [00:00<00:00, 45902.35 examples/s]
+[2025-05-09T21:44:14.466+0000] {logging_mixin.py:137} WARNING - Generating train split:  80%|########  | 20000/25000 [00:00<00:00, 60255.68 examples/s]
+[2025-05-09T21:44:14.538+0000] {logging_mixin.py:137} WARNING -                                                                                        
+[2025-05-09T21:44:14.540+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-09T21:44:14.541+0000] {logging_mixin.py:137} WARNING - Generating test split:   0%|          | 0/25000 [00:00<?, ? examples/s]
+[2025-05-09T21:44:14.720+0000] {logging_mixin.py:137} WARNING - Generating test split:  80%|########  | 20000/25000 [00:00<00:00, 112186.76 examples/s]
+[2025-05-09T21:44:14.796+0000] {logging_mixin.py:137} WARNING -                                                                                        
+[2025-05-09T21:44:14.817+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/huggingface_pipeline.py", line 17, in extract_data
+    dataset = load_dataset("imdb")
+  File "/home/airflow/.local/lib/python3.7/site-packages/datasets/load.py", line 1815, in load_dataset
+    storage_options=storage_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/datasets/builder.py", line 913, in download_and_prepare
+    **download_and_prepare_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/datasets/builder.py", line 1022, in _download_and_prepare
+    verify_splits(self.info.splits, split_dict)
+  File "/home/airflow/.local/lib/python3.7/site-packages/datasets/utils/info_utils.py", line 91, in verify_splits
+    raise ExpectedMoreSplits(str(set(expected_splits) - set(recorded_splits)))
+datasets.utils.info_utils.ExpectedMoreSplits: {'unsupervised'}
+[2025-05-09T21:44:14.833+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=huggingface_pipeline, task_id=extract_data, execution_date=20250509T214409, start_date=20250509T214411, end_date=20250509T214414
+[2025-05-09T21:44:14.843+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 27 for task extract_data ({'unsupervised'}; 80689)
+[2025-05-09T21:44:14.916+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2025-05-09T21:44:14.940+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

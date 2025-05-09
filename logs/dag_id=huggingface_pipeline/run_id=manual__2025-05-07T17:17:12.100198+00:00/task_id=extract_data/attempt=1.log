@@ -1,0 +1,117 @@
+[2025-05-07T17:17:13.708+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: huggingface_pipeline.extract_data manual__2025-05-07T17:17:12.100198+00:00 [queued]>
+[2025-05-07T17:17:13.768+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: huggingface_pipeline.extract_data manual__2025-05-07T17:17:12.100198+00:00 [queued]>
+[2025-05-07T17:17:13.769+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-07T17:17:13.772+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2025-05-07T17:17:13.773+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-07T17:17:13.782+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_data> on 2025-05-07 17:17:12.100198+00:00
+[2025-05-07T17:17:13.789+0000] {standard_task_runner.py:55} INFO - Started process 196 to run task
+[2025-05-07T17:17:13.796+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'huggingface_pipeline', 'extract_data', 'manual__2025-05-07T17:17:12.100198+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/huggingface_pipeline.py', '--cfg-path', '/tmp/tmp984y05ti']
+[2025-05-07T17:17:13.800+0000] {standard_task_runner.py:83} INFO - Job 20: Subtask extract_data
+[2025-05-07T17:17:13.817+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-07T17:17:13.872+0000] {task_command.py:389} INFO - Running <TaskInstance: huggingface_pipeline.extract_data manual__2025-05-07T17:17:12.100198+00:00 [running]> on host 2ee681e0adcd
+[2025-05-07T17:17:13.937+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=huggingface_pipeline
+AIRFLOW_CTX_TASK_ID=extract_data
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-07T17:17:12.100198+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-05-07T17:17:12.100198+00:00
+[2025-05-07T17:17:15.831+0000] {logging_mixin.py:137} WARNING - Downloading readme:   0%|          | 0.00/7.81k [00:00<?, ?B/s]
+[2025-05-07T17:17:15.839+0000] {logging_mixin.py:137} WARNING - Downloading readme: 100%|##########| 7.81k/7.81k [00:00<00:00, 3.41MB/s]
+[2025-05-07T17:17:15.870+0000] {logging_mixin.py:137} INFO - Downloading and preparing dataset None/plain_text to /home/***/.cache/huggingface/datasets/parquet/plain_text-cafccae0f4e408dc/0.0.0/14a00e99c0d15a23649d0db8944380ac81082d4b021f398733dd84f3a6c569a7...
+[2025-05-07T17:17:16.084+0000] {logging_mixin.py:137} WARNING - Downloading data files:   0%|          | 0/2 [00:00<?, ?it/s]
+[2025-05-07T17:17:16.549+0000] {logging_mixin.py:137} WARNING - Downloading data:   0%|          | 0.00/21.0M [00:00<?, ?B/s]
+[2025-05-07T17:17:16.550+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:16.652+0000] {logging_mixin.py:137} WARNING - Downloading data:   8%|8         | 1.68M/21.0M [00:00<00:01, 16.8MB/s]
+[2025-05-07T17:17:16.653+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:16.752+0000] {logging_mixin.py:137} WARNING - Downloading data:  18%|#7        | 3.75M/21.0M [00:00<00:00, 19.1MB/s]
+[2025-05-07T17:17:16.754+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:16.852+0000] {logging_mixin.py:137} WARNING - Downloading data:  31%|###       | 6.42M/21.0M [00:00<00:00, 22.5MB/s]
+[2025-05-07T17:17:16.853+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:16.953+0000] {logging_mixin.py:137} WARNING - Downloading data:  43%|####2     | 8.99M/21.0M [00:00<00:00, 23.7MB/s]
+[2025-05-07T17:17:16.954+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:17.068+0000] {logging_mixin.py:137} WARNING - Downloading data:  54%|#####4    | 11.4M/21.0M [00:00<00:00, 22.5MB/s]
+[2025-05-07T17:17:17.069+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:17.168+0000] {logging_mixin.py:137} WARNING - Downloading data:  68%|######8   | 14.3M/21.0M [00:00<00:00, 24.7MB/s]
+[2025-05-07T17:17:17.171+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:17.269+0000] {logging_mixin.py:137} WARNING - Downloading data:  81%|########1 | 17.0M/21.0M [00:00<00:00, 25.4MB/s]
+[2025-05-07T17:17:17.272+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:17.369+0000] {logging_mixin.py:137} WARNING - Downloading data:  94%|#########3| 19.7M/21.0M [00:00<00:00, 25.8MB/s]
+[2025-05-07T17:17:17.371+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:17.405+0000] {logging_mixin.py:137} WARNING - Downloading data: 100%|##########| 21.0M/21.0M [00:00<00:00, 24.6MB/s]
+[2025-05-07T17:17:17.408+0000] {logging_mixin.py:137} WARNING - Downloading data files:  50%|#####     | 1/2 [00:01<00:01,  1.32s/it]
+[2025-05-07T17:17:18.111+0000] {logging_mixin.py:137} WARNING - Downloading data:   0%|          | 0.00/20.5M [00:00<?, ?B/s]
+[2025-05-07T17:17:18.113+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:18.221+0000] {logging_mixin.py:137} WARNING - Downloading data:   0%|          | 17.4k/20.5M [00:00<02:05, 163kB/s]
+[2025-05-07T17:17:18.223+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:18.343+0000] {logging_mixin.py:137} WARNING - Downloading data:   0%|          | 64.5k/20.5M [00:00<01:07, 303kB/s]
+[2025-05-07T17:17:18.344+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:18.464+0000] {logging_mixin.py:137} WARNING - Downloading data:   1%|          | 114k/20.5M [00:00<00:57, 352kB/s] 
+[2025-05-07T17:17:18.467+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:18.564+0000] {logging_mixin.py:137} WARNING - Downloading data:   1%|          | 193k/20.5M [00:00<00:40, 507kB/s]
+[2025-05-07T17:17:18.567+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:18.669+0000] {logging_mixin.py:137} WARNING - Downloading data:   1%|1         | 279k/20.5M [00:00<00:32, 616kB/s]
+[2025-05-07T17:17:18.671+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:18.782+0000] {logging_mixin.py:137} WARNING - Downloading data:   2%|2         | 414k/20.5M [00:00<00:24, 818kB/s]
+[2025-05-07T17:17:18.786+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:18.884+0000] {logging_mixin.py:137} WARNING - Downloading data:   3%|2         | 549k/20.5M [00:00<00:20, 975kB/s]
+[2025-05-07T17:17:18.885+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:18.986+0000] {logging_mixin.py:137} WARNING - Downloading data:   4%|3         | 744k/20.5M [00:00<00:15, 1.26MB/s]
+[2025-05-07T17:17:18.987+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.087+0000] {logging_mixin.py:137} WARNING - Downloading data:   5%|5         | 1.11M/20.5M [00:00<00:09, 1.97MB/s]
+[2025-05-07T17:17:19.088+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.190+0000] {logging_mixin.py:137} WARNING - Downloading data:   8%|8         | 1.73M/20.5M [00:01<00:05, 3.21MB/s]
+[2025-05-07T17:17:19.192+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.291+0000] {logging_mixin.py:137} WARNING - Downloading data:  14%|#3        | 2.79M/20.5M [00:01<00:03, 5.40MB/s]
+[2025-05-07T17:17:19.292+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.391+0000] {logging_mixin.py:137} WARNING - Downloading data:  20%|##        | 4.11M/20.5M [00:01<00:02, 7.70MB/s]
+[2025-05-07T17:17:19.393+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.491+0000] {logging_mixin.py:137} WARNING - Downloading data:  28%|##7       | 5.70M/20.5M [00:01<00:01, 10.1MB/s]
+[2025-05-07T17:17:19.493+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.592+0000] {logging_mixin.py:137} WARNING - Downloading data:  38%|###7      | 7.69M/20.5M [00:01<00:00, 13.0MB/s]
+[2025-05-07T17:17:19.594+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.692+0000] {logging_mixin.py:137} WARNING - Downloading data:  47%|####6     | 9.59M/20.5M [00:01<00:00, 14.8MB/s]
+[2025-05-07T17:17:19.694+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.792+0000] {logging_mixin.py:137} WARNING - Downloading data:  59%|#####9    | 12.2M/20.5M [00:01<00:00, 18.1MB/s]
+[2025-05-07T17:17:19.795+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.892+0000] {logging_mixin.py:137} WARNING - Downloading data:  73%|#######3  | 15.0M/20.5M [00:01<00:00, 21.3MB/s]
+[2025-05-07T17:17:19.894+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:19.993+0000] {logging_mixin.py:137} WARNING - Downloading data:  87%|########7 | 17.8M/20.5M [00:01<00:00, 23.2MB/s]
+[2025-05-07T17:17:19.995+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:20.094+0000] {logging_mixin.py:137} WARNING - Downloading data:  99%|#########9| 20.3M/20.5M [00:01<00:00, 23.7MB/s]
+[2025-05-07T17:17:20.096+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:20.109+0000] {logging_mixin.py:137} WARNING - Downloading data: 100%|##########| 20.5M/20.5M [00:01<00:00, 10.3MB/s]
+[2025-05-07T17:17:20.110+0000] {logging_mixin.py:137} WARNING - Downloading data files: 100%|##########| 2/2 [00:04<00:00,  2.13s/it]
+[2025-05-07T17:17:20.111+0000] {logging_mixin.py:137} WARNING - Downloading data files: 100%|##########| 2/2 [00:04<00:00,  2.01s/it]
+[2025-05-07T17:17:20.113+0000] {logging_mixin.py:137} WARNING - Extracting data files:   0%|          | 0/2 [00:00<?, ?it/s]
+[2025-05-07T17:17:20.114+0000] {logging_mixin.py:137} WARNING - Extracting data files: 100%|##########| 2/2 [00:00<00:00, 3346.07it/s]
+[2025-05-07T17:17:20.116+0000] {logging_mixin.py:137} WARNING - Generating train split:   0%|          | 0/25000 [00:00<?, ? examples/s]
+[2025-05-07T17:17:20.284+0000] {logging_mixin.py:137} WARNING - Generating train split:  80%|########  | 20000/25000 [00:00<00:00, 119356.59 examples/s]
+[2025-05-07T17:17:20.317+0000] {logging_mixin.py:137} WARNING -                                                                                         
+[2025-05-07T17:17:20.318+0000] {logging_mixin.py:137} WARNING - 
+[2025-05-07T17:17:20.319+0000] {logging_mixin.py:137} WARNING - Generating test split:   0%|          | 0/25000 [00:00<?, ? examples/s]
+[2025-05-07T17:17:20.422+0000] {logging_mixin.py:137} WARNING - Generating test split:  80%|########  | 20000/25000 [00:00<00:00, 197149.39 examples/s]
+[2025-05-07T17:17:20.443+0000] {logging_mixin.py:137} WARNING -                                                                                        
+[2025-05-07T17:17:20.464+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/huggingface_pipeline.py", line 14, in extract_data
+    dataset = load_dataset("imdb")
+  File "/home/airflow/.local/lib/python3.7/site-packages/datasets/load.py", line 1815, in load_dataset
+    storage_options=storage_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/datasets/builder.py", line 913, in download_and_prepare
+    **download_and_prepare_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/datasets/builder.py", line 1022, in _download_and_prepare
+    verify_splits(self.info.splits, split_dict)
+  File "/home/airflow/.local/lib/python3.7/site-packages/datasets/utils/info_utils.py", line 91, in verify_splits
+    raise ExpectedMoreSplits(str(set(expected_splits) - set(recorded_splits)))
+datasets.utils.info_utils.ExpectedMoreSplits: {'unsupervised'}
+[2025-05-07T17:17:20.479+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=huggingface_pipeline, task_id=extract_data, execution_date=20250507T171712, start_date=20250507T171713, end_date=20250507T171720
+[2025-05-07T17:17:20.488+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 20 for task extract_data ({'unsupervised'}; 196)
+[2025-05-07T17:17:20.554+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2025-05-07T17:17:20.576+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

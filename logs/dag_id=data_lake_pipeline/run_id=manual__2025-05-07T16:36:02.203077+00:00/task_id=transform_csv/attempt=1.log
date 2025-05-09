@@ -1,0 +1,24 @@
+[2025-05-07T16:36:03.502+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: data_lake_pipeline.transform_csv manual__2025-05-07T16:36:02.203077+00:00 [queued]>
+[2025-05-07T16:36:03.511+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: data_lake_pipeline.transform_csv manual__2025-05-07T16:36:02.203077+00:00 [queued]>
+[2025-05-07T16:36:03.512+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-07T16:36:03.513+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2025-05-07T16:36:03.515+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-07T16:36:03.525+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): transform_csv> on 2025-05-07 16:36:02.203077+00:00
+[2025-05-07T16:36:03.531+0000] {standard_task_runner.py:55} INFO - Started process 182 to run task
+[2025-05-07T16:36:03.535+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'data_lake_pipeline', 'transform_csv', 'manual__2025-05-07T16:36:02.203077+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/data_lake_pipeline.py', '--cfg-path', '/tmp/tmpusceh16q']
+[2025-05-07T16:36:03.541+0000] {standard_task_runner.py:83} INFO - Job 11: Subtask transform_csv
+[2025-05-07T16:36:03.559+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:249 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-07T16:36:03.616+0000] {task_command.py:389} INFO - Running <TaskInstance: data_lake_pipeline.transform_csv manual__2025-05-07T16:36:02.203077+00:00 [running]> on host 19d7090b71dc
+[2025-05-07T16:36:03.879+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_lake_pipeline
+AIRFLOW_CTX_TASK_ID=transform_csv
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-07T16:36:02.203077+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-05-07T16:36:02.203077+00:00
+[2025-05-07T16:36:03.902+0000] {python.py:177} INFO - Done. Returned value was: None
+[2025-05-07T16:36:03.915+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=data_lake_pipeline, task_id=transform_csv, execution_date=20250507T163602, start_date=20250507T163603, end_date=20250507T163603
+[2025-05-07T16:36:03.960+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2025-05-07T16:36:03.980+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
