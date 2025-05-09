@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.envrc
+*.db
+*.sqlite3
+airflow.cfg
+logs/
+__init__.py
+*.log
+.dags/
+.docker/
+
